@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+@using DTO.DTOs
+@model CityToAddOrUpdateDTO
+
+<form asp-controller="Book" asp-action="AddCity">
+    <br />
+    @if (TempData["CityMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <strong>Uğurlu Əməliyyat: </strong>  @TempData["CityMessage"]
+        </div>
+    }
+    <br />
+    <div class="form-group">
+        <label for="exampleInputEmail1">Şəhər Əlavə Edin</label>
+        <input type="text" asp-for="@Model.CityName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Şəhər Əlavə Edin">
+        <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <button type="submit" class="btn btn-primary">Yadda Saxla</button>
+</form>

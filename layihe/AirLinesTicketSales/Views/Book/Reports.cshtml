@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+@using DTO.DTOs
+@model List<PassengerToGetDTO>
+
+@{
+    int resp = 0;
+    int count = 0;
+
+    foreach (var pas in Model)
+    {
+        resp += pas.Fly.Price;
+    }
+}
+<style>
+
+    table tr th {
+        text-align: center;
+    }
+
+    tbody tr td {
+        text-align: center;
+    }
+</style>
+
+<center><h1>Ümumi Biletlər</h1></center>
+<center><h3>Bilet Satış Məbləği: @resp AZN</h3></center>
+<br />
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-warning">
+        <strong>BİLDİRİŞ: </strong> @TempData["AlertMessage"]
+    </div>
+}
+
+<table class="table table-info table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">#</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Pasportun Nömrəsi</th>
+            <th scope="col">Uçuş Seriyası</th>
+            <th scope="col">İadə</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var passenger in Model)
+        {
+            count++;
+
+            <tr>
+                <td>@count</td>
+                <td>@passenger.PassengerName</td>
+                <td>@passenger.PassengerSurname</td>
+                <td>@passenger.PassengerPassportNo</td>
+                <td>@passenger.Fly.FlySeries</td>
+                <td>@Html.ActionLink("Bileti İadə Etmək", "ReturnTicket", "Book", new { passengerId = passenger.PassengerId }, new { @class = "btn btn-warning" })</td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

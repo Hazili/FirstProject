@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+<div>
+    <a asp-controller="Book" asp-action="FlyForm" style="margin-bottom:30px; float:right; margin-right:28px" class="btn btn-primary">Uçuş Əlavə Edin</a>
+</div>
+@using DTO.DTOs
+@model List<FlyToGetDTO>
+<br />
+<br />
+@if (TempData["CreateFly"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Uğurlu Əməliyyat: </strong> @TempData["CreateFly"]
+    </div>
+}
+
+<br />
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-danger">
+        <strong>Məlumat: </strong>   @TempData["AlertMessage"]
+    </div>
+}
+<br />
+@if (TempData["AlertMessage_2"] != null)
+{
+    <div class="alert alert-warning">
+        <strong>Məlumat: </strong>  @TempData["AlertMessage_2"]
+    </div>
+}
+
+<style>
+
+    table tr th {
+        text-align: center;
+    }
+
+    tbody tr td {
+        text-align: center;
+    }
+</style>
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th scope="col">Seriya</th>
+            <th scope="col">Haradan</th>
+            <th scope="col">Hava Limanı</th>
+            <th scope="col">Haraya</th>
+            <th scope="col">Hava Limanı</th>
+            <th scope="col">Uçuş Vaxtı</th>
+            <th scope="col">Bilet Sayı</th>
+            <th scope="col">Qiymət</th>
+            <th scope="col">Qeydiyyat</th>
+            <th scope="col">İadə</th>
+            <th scope="col">Ləğv Etmək</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var FlyInfo in Model)
+        {
+
+
+            <tr>
+                <td>@FlyInfo.FlySeries</td>
+                <td>@FlyInfo.DepartureCityName</td>
+                <td>@FlyInfo.Airport_1</td>
+                <td>@FlyInfo.ArrivalCityName</td>
+                <td>@FlyInfo.Airport_2</td>
+                <td>@FlyInfo.DateTime</td>
+                <td>@FlyInfo.NumberOfTicket</td>
+                <td>@FlyInfo.Price</td>
+                <td>@Html.ActionLink("Uçuşa Qeydiyyat", "FlyRegistrationForm", "Book", new { flyId = FlyInfo.FlyId }, new { @class = "btn btn-success" }) </td>
+                <td> <a href="~/Book/Reports" class="btn btn-warning">Bileti İadə Etmək</a> </td>
+                <td>@Html.ActionLink("Uçuşu Ləğv Etmək", "DeleteFly", "Book", new { flyId = FlyInfo.FlyId }, new { @class = "btn btn-danger" }) </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+<!--<a href="~/Book/FlyRegistrationForm" class="btn btn-success">Uçuşa Qeydiyyat</a>-->

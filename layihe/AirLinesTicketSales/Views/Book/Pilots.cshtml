@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+@using DTO.DTOs
+@model List<PilotGaleryToGetDTO>
+<link rel="stylesheet" href="~/PilotsCss/css.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<h2 class="font-weight-bold mb-2"><strong>Pilotlarımız</strong></h2>
+<p class="font-italic text-muted mb-4">Onlar Sizi Düşünür :)</p>
+
+
+
+<div class="row pb-5 mb-4">
+
+    @foreach (var pilots in Model)
+    {
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <!-- Card-->
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body p-0">
+                    <img style="height:173px;" src="~/Pilots/@pilots.ImageURL" alt="" class="w-100 card-img-top">
+                    <div class="p-4">
+                        <h5 class="mb-0">@pilots.FullName</h5>
+                        <p class="small text-muted">Azal - Pilot</p>
+                        <ul class="social mb-0 list-inline mt-3">
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                            <li class="list-inline-item m-0"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>

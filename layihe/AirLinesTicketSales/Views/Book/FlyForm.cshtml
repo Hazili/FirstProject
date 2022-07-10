@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+@using DTO.DTOs
+@model FlyToAddOrUpdateDTO
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/FlyForm/css.css" />
+<!--Card-->
+<div class="card shadow mb-5 bg-white rounded">
+
+    <!--Card-Body-->
+    <div class="card-body">
+
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Uçuş Qeydiyyat Formu</p>
+
+        <div class="icons text-center">
+
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+
+
+
+        </div>
+
+        <hr>
+
+        <form asp-controller="Book" asp-action="CreateFlyForm" method="post">
+            <p class="searchText"><strong>Hava Yolları Seçin</strong></p>
+
+            <!--First Row-->
+            <div class="row mb-3 mt-3">
+
+                <label class="radiobtn"><input type="radio" name="gender" value="male">Azal Airlines</label>
+                <label class="radiobtn"><input type="radio" name="gender" value="male">Buta Airlines</label>
+
+            </div>
+
+
+            <!--Second Row-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <select asp-for="@Model.DepartureCityName" asp-items="@(new SelectList(Model.City, "CityName", "CityName"))"  class="browser-default custom-select mb-4" id="select">
+                        <option value="" disabled="" selected="">Haradan</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-6">
+                    <select asp-for="@Model.ArrivalCityName" asp-items="@(new SelectList(Model.City, "CityName", "CityName"))"  class="browser-default custom-select mb-4" id="select">
+                        <option value="" disabled="" selected="">Haraya</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!--Third Row-->
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <input asp-for="@Model.Airport_1" placeholder="&#xf073; Hava Limani" type="text" id="date-picker-example" class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome">
+                </div>
+
+                <div class="col-sm-6">
+                    <input asp-for="@Model.Airport_2" placeholder="&#xf073; Hava Limani" type="text" id="date-picker-example" class="form-control datepicker" style="font-family:Arial, FontAwesome">
+                </div>
+
+            </div>
+
+
+            <!--Fourth Row-->
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <label for="exampleFormControlSelect2">Vaxt</label>>
+                    @Html.EditorFor(model => model.DateTime, new { htmlAttributes = new { @class = "DateTime browser-default custom-select mb-4" } })
+                </div>
+
+                <!--  <input asp-for="" type="datetime" class="browser-default custom-select mb-4" id="select">  -->
+
+                <div class="col-sm-6">
+                    <label for="exampleFormControlSelect2">Qiymət</label>>
+                    <input asp-for="@Model.Price" type="number" class="browser-default custom-select mb-4" id="select">
+
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3">
+
+                    <label for="exampleFormControlSelect2">Terminal</label>>
+                    <input asp-for="@Model.Terminal" type="text" />
+
+                </div>
+
+                <div class="col-sm-3">
+
+                    <label for="exampleFormControlSelect2">Uçuş Seriyası</label>>
+                    <input asp-for="@Model.FlySeries" type="text" />
+                </div>
+
+
+
+                <div class="col-sm-3">
+
+                    <label for="exampleFormControlSelect2">Bilet Sayı(Capacity)</label>>
+                    <input asp-for="@Model.Capacity" type="number" />
+                </div>
+
+
+
+                <div class="col-sm-3">
+
+                    <label for="exampleFormControlSelect2">Bilet Sayı</label>>
+                    <input asp-for="@Model.NumberOfTicket" type="number" />
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary float-right mt-5">Yadda Saxla</button>
+        </form>
+    </div>
+</div>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />

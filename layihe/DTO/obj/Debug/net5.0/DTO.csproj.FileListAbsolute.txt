@@ -1,0 +1,12 @@
+C:\Users\Mushvig\source\layihe\DTO\bin\Debug\net5.0\DTO.deps.json
+C:\Users\Mushvig\source\layihe\DTO\bin\Debug\net5.0\DTO.dll
+C:\Users\Mushvig\source\layihe\DTO\bin\Debug\net5.0\ref\DTO.dll
+C:\Users\Mushvig\source\layihe\DTO\bin\Debug\net5.0\DTO.pdb
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.dll
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\ref\DTO.dll
+C:\Users\Mushvig\source\layihe\DTO\obj\Debug\net5.0\DTO.pdb

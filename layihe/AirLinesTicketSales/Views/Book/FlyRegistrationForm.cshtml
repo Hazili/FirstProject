@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "_TestLayout";
+}
+
+@using DTO.DTOs
+@model PassengerToAddDTO
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/FlyForm/css.css" />
+<!--Card-->
+<div class="card shadow mb-5 bg-white rounded">
+
+    <!--Card-Body-->
+    <div class="card-body">
+
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Sərnişin Qeydiyyat Formu</p>
+
+        <div class="icons text-center">
+
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+
+
+
+        </div>
+
+        <hr>
+
+
+    </div>
+    <form asp-controller="Book" asp-action="CreateTicket" asp-route-id="@Model.FlyToAddOrUpdateDTO.FlyId" method="post">
+        <!--<div class="row">
+
+            <center class="row">
+
+
+                <label style="width: 59px" for="exampleFormControlSelect2">Ad</label>
+                <input type="text" />
+
+
+                <label style="width: 59px" for="exampleFormControlSelect2">Soyad</label>
+                <input type="text" />
+
+
+                <label style="width: 59px" for="exampleFormControlSelect2">Pasport Seriya</label>
+                <input type="text" />
+
+            </center>
+        </div>-->
+        <center>
+            <table style="width:100%;margin-left: 39px;">
+
+                <tr>
+                    <td>
+                        <label style="width: 33%" for="exampleFormControlSelect2">
+                            <span>Ad</span>
+                            <input type="text" asp-for="@Model.PassengerName" />
+                        </label>
+
+                    </td>
+                    <td>
+                        <label style="width: 33%" for="exampleFormControlSelect2">
+                            <span>Soyad</span>
+                            <input type="text" asp-for="@Model.PassengerSurname" />
+                        </label>
+
+                    </td>
+                    <td>
+                        <label style="width: 33%" for="exampleFormControlSelect2">
+                            <span>Pasport Seriya</span>
+                            <input type="text" asp-for="@Model.PassengerPassportNo" />
+                        </label>
+                    </td>
+                </tr>
+
+            </table>
+
+
+
+
+            <button type="submit" class="btn btn-primary mt-5">Qeydiyyat Etmək</button>
+        </center>
+    </form>
+
+
+</div>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />

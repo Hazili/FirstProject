@@ -1,0 +1,18 @@
+﻿@using Entity.Entities
+@model AddPilotImage
+
+@{
+    Layout = "_TestLayout";
+}
+
+<h2 style="display: flex">Pilot Şəkili Əlavə Edin</h2>
+<form class="form-group" asp-controller="Book" asp-action="CreatePilotImg" method="post" enctype="multipart/form-data">
+    @Html.Label("Pilotun Adı")
+    @Html.TextBoxFor(x => x.PilotFullName, new { @class = "form-Control" })
+    <br />
+    @Html.Label("Şəkil seçin")
+    <input type="file" name="ImageURL" />
+    <br />
+
+    <button class="btn btn-primary">Əlavə Edin</button>
+</form>

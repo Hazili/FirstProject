@@ -1,0 +1,264 @@
+﻿@{
+    Layout = "_Layout2";
+}
+
+<!--<link rel="stylesheet" href="~/css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="~/css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="~/css/style.css" type="text/css" media="all">-->
+<section id="content">
+    <div class="for_banners">
+        <article class="col1">
+            <div class="tabs">
+                <ul class="nav">
+                    <li class="selected"><a href="#Flight">Uçuşlar</a></li>
+                    <li><a href="#Hotel">Hotel</a></li>
+                    <li class="end"><a href="#Rental">İcarə</a></li>
+                </ul>
+                <div class="content">
+                    <div class="tab-content" id="Flight">
+                        <form id="form_1" action="#" method="post">
+                            <div>
+                                <div class="radio">
+                                    <div class="wrapper">
+                                        <input type="radio" name="name1" checked>
+                                        <span class="left">Standart</span>
+                                        <input type="radio" name="name1">
+                                        <span class="left">Dünya Xəritəsi</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="left">Haradan</span>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Haraya</span>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="wrapper">
+                                    <div class="col1" style="width: 193px; padding-left: 0px;">
+                                        <div class="row">
+                                            <span class="left">Gediş</span>
+                                            <input type="text" class="input1" value="09.06.2022" onblur="if(this.value=='') this.value='03.05.2011'" onFocus="if(this.value =='03.05.2011' ) this.value=''">
+                                        </div>
+                                        <div class="row">
+                                            <span class="left">Qayıdış</span>
+                                            <input type="text" class="input1" value="25.06.2022" onblur="if(this.value=='') this.value='10.05.2011'" onFocus="if(this.value =='10.05.2011' ) this.value=''">
+                                        </div>
+                                    </div>
+                                    <input type="text" class="input1 marg_top1" value="+/- 0 Gün" onblur="if(this.value=='') this.value='+/- 0 Days'" onFocus="if(this.value =='+/- 0 Days' ) this.value=''">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Böyüklər</span>
+                                    <input type="text" class="input2" value="0" onblur="if(this.value=='') this.value='2'" onFocus="if(this.value =='2' ) this.value=''">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Uşaqlar</span>
+                                    <input type="text" class="input2" value="0" onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
+                                    <span class="pad_left1">(0-11 Yaş)</span>
+                                </div>
+                                <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Axtarış</strong></a></span> <a href="#" class="link1">Daha Ətraflı</a> </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-content" id="Hotel">
+                        <form id="form_2" action="#" method="post">
+                            <div>
+                                <div class="radio">
+                                    <div class="wrapper">
+                                        <input type="checkbox" checked>
+                                        Tərəfdaşlarımız
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="left">Məkan</span>
+                                    <input type="text" class="input">
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <span class="left">Təhvil almaq </span>
+                                    <input type="text" class="input1" value="09.06.2022" onblur="if(this.value=='') this.value='03.05.2011'" onFocus="if(this.value =='03.05.2011' ) this.value=''">
+                                    <a href="#" class="help"></a>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <span class="left">Təhvil vermək </span>
+                                    <input type="text" class="input1" value="25.06.2022" onblur="if(this.value=='') this.value='10.05.2011'" onFocus="if(this.value =='10.05.2011' ) this.value=''">
+                                    <a href="#" class="help"></a>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <span class="left">Otaqlar</span>
+                                    <input type="text" class="input2" value="1" onblur="if(this.value=='') this.value='1'" onFocus="if(this.value =='1' ) this.value=''">
+                                    <a href="#" class="help"></a>
+                                </div>
+                                <div class="row">
+                                    <span class="left">Böyüklər</span>
+                                    <input type="text" class="input2" value="2" onblur="if(this.value=='') this.value='2'" onFocus="if(this.value =='2' ) this.value=''">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Uşaqlar</span>
+                                    <input type="text" class="input2" value="0" onblur="if(this.value=='') this.value='0'" onFocus="if(this.value =='0' ) this.value=''">
+                                    <span class="pad_left1">(0-11 Yaş)</span>
+                                </div>
+                                <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Axtarış</strong></a></span> <a href="#" class="link1">Daha Ətraflı</a> </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-content" id="Rental">
+                        <form id="form_3" action="#" method="post">
+                            <div>
+                                <div class="radio">
+                                    <div class="wrapper">
+                                        <input type="radio" name="name2" checked>
+                                        <span class="left">Eco</span>
+                                        <input type="radio" name="name2">
+                                        <span class="left">Comfort</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <span class="left">İcarə Yeri</span>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Təhvil Almaq</span>
+                                    <input type="text" class="input1" value="03.05.2011" onblur="if(this.value=='') this.value='09.06.2022'" onFocus="if(this.value =='25.06.2022' ) this.value=''">
+                                    <input type="text" class="input2" value="12:00" onblur="if(this.value=='') this.value='12:00'" onFocus="if(this.value =='12:00' ) this.value=''">
+                                </div>
+                                <div class="row">
+                                    <span class="left">Təhvil Vermək</span>
+                                    <input type="text" class="input1" value="10.05.2011" onblur="if(this.value=='') this.value='09.06.2022'" onFocus="if(this.value =='09.06.2022' ) this.value=''">
+                                    <input type="text" class="input2" value="12:00" onblur="if(this.value=='') this.value='12:00'" onFocus="if(this.value =='12:00' ) this.value=''">
+                                </div>
+                                
+
+
+                                <div class="row_select">
+                                    <div class="pad_left1">
+                                        Ölkə<br>
+                                        <div class="select1">
+                                            <select>
+                                                <option>&nbsp;</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrapper"> <span class="right relative"><a href="#" class="button1"><strong>Axtarış</strong></a></span> </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <div id="slider"> <img src="~/images/banner1.jpg" alt=""> <img src="~/images/banner2.jpg" alt=""> <img src="~/images/banner3.jpg" alt=""> </div>
+    </div>
+    <div class="wrapper pad1">
+        <article class="col1">
+            <div class="box1">
+                <h2 class="top">Xüsusi Təkliflər</h2>
+                <div class="pad">
+                    <strong>Bakıdan</strong><br>
+                    <ul class="pad_bot1 list1">
+                        <li> <span class="right color1">458 AZN-</span> <a href="book2.html">Moskva</a> </li>
+                    </ul>
+                    <strong>Bakıdan</strong><br>
+                    <ul class="pad_bot1 list1">
+                        <li> <span class="right color1">286 AZN-</span> <a href="book2.html">İstanbul</a> </li>
+                        <li> <span class="right color1">255 AZN-</span> <a href="book2.html">Ankara</a> </li>
+                    </ul>
+                    <strong>İstanbuldan</strong><br>
+                    <ul class="pad_bot2 list1">
+                        <li> <span class="right color1">298 AZN-</span> <a href="book2.html">Berlin</a> </li>
+                        <li> <span class="right color1">552 AZN-</span> <a href="book2.html">Barselona</a> </li>
+                        <li> <span class="right color1">512 AZN-</span> <a href="book2.html">Madrid</a> </li>
+                    </ul>
+                </div>
+                <h2>Daxili uçuşlar</h2>
+                <div class="pad">
+                    <strong>Bakıdan</strong><br>
+                    <ul class="pad_bot2 list1">
+                        <li class="pad_bot1"> <span class="right color1">128 AZN-</span> <a href="book2.html">Füzuli</a> </li>
+                    </ul>
+                    <ul class="pad_bot2 list1">
+                        <li class="pad_bot1"> <span class="right color1">105 AZN-</span> <a href="book2.html">Naxçıvan</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <style>
+            .index {
+                width: 30px;
+                padding-left: 16px;
+                float: left;
+                font-size: 100%;
+                display: block;
+                vertical-align: top;
+            }
+
+        </style>
+
+        <article class="col2">
+            <h3 style="width:125%">Uçuş haqqında məlumat<span>Azərbaycan Hava Yolları</span></h3>
+            <div class="wrapper" style="width: 550px;">
+                <article class="cols" style="width:48%">
+                    <figure><img src="~/images/page1_img1.jpg" alt="" class="pad_bot2"></figure>
+                    <p class="pad_bot1"><strong>Uçuş üçün zəruri olan sənədlər</strong></p>
+                    <p>
+                        Beynəlxalq uçuşlar üçün aviabiletdən əlavə, Siz özünüzlə qüvvədə olan pasportu götürməli, sərhədini keçdiyiniz və marşrutun son nöqtəsindəki ölkələrin viza, gömrük və tibbi qaydalarına riayət etməlisiniz.
+                        Bu qaydalara əməl olunmaması daşımadan imtina ilə nəticələnə bilər.
+                    </p>
+                </article>
+                <article class="index" style="width:48%">
+                    <figure><img src="~/images/page1_img2.jpg" alt="" class="pad_bot2"></figure>
+                    <p class="pad_bot1"><strong>Hörmətli sərnişinlər!</strong></p>
+                    <p>Uçuş zamanı maraqlı əyləncələrdən zövq almaq və vaxtınızı səmərəli keçirmək üçün sizə fərqli və müxtəlif janrda media materialları təklif edirik. “Azərbaycan Hava Yolları” şirkətinin uçuşda yüksək səviyyəli əyləncə sistemi vasitəsilə sizlərə yeni Hollivud və digər beynəlxalq filmlər, maarifləndirici sənədli filmlər, komediyalar, musiqi klipləri, filmlərdən musiqilər, həmçinin müxtəlif dil seçimi imkanı olan geniş tərkibli media faylları təqdim edirik. Biz balaca dostlarımızı da unutmamışıq. Kolleksiyamızda onlar üçün fərqli oyunlar, cizgi filmləri və animasiyalar nəzərdə tutulur.</p>
+                </article>
+            </div>
+            <a href="#" class="button1"><strong>Daha Ətraflı</strong></a>
+        </article>
+    </div>
+</section>
+
+<script type="text/javascript" src="~/js/jquery-1.5.2.js"></script>
+<script type="text/javascript" src="~/js/cufon-yui.js"></script>
+<script type="text/javascript" src="~/js/cufon-replace.js"></script>
+<!--<script type="text/javascript" src="~/js/Cabin_400.font.js"></script>-->
+<script type="text/javascript" src="~/js/tabs.js"></script>
+<script type="text/javascript" src="~/js/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="~/js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="~/js/atooltip.jquery.js"></script>
+<script type="text/javascript" src="~/js/script.js"></script>
+<script type="text/javascript">Cufon.now();</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        tabs.init();
+    });
+    jQuery(document).ready(function ($) {
+        $('#form_1, #form_2, #form_3').jqTransform({
+            imgPath: 'jqtransformplugin/img/'
+        });
+    });
+    $(window).load(function () {
+        $('#slider').nivoSlider({
+            effect: 'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'
+            slices: 15,
+            animSpeed: 500,
+            pauseTime: 6000,
+            startSlide: 0, //Set starting Slide (0 index)
+            directionNav: false, //Next & Prev
+            directionNavHide: false, //Only show on hover
+            controlNav: false, //1,2,3...
+            controlNavThumbs: false, //Use thumbnails for Control Nav
+            controlNavThumbsFromRel: false, //Use image rel for thumbs
+            controlNavThumbsSearch: '.jpg', //Replace this with...
+            controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+            keyboardNav: true, //Use left & right arrows
+            pauseOnHover: true, //Stop animation while hovering
+            manualAdvance: false, //Force manual transitions
+            captionOpacity: 1, //Universal caption opacity
+            beforeChange: function () { },
+            afterChange: function () { },
+            slideshowEnd: function () { } //Triggers after all slides have been shown
+        });
+    });
+</script>
